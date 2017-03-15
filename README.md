@@ -20,7 +20,7 @@ nvidia-docker build -t <IMAGE_NAME_YOU_LIKE> .
 nvidia-docker run -ti <IMAGE_NAME_YOU_LIKE>
 ```
 
-2.Once you are attach to the image, move to the pvanet directory
+2.Once you are attached to the image, move to the pvanet directory
 ```Shell 
 cd pva-faster-rcnn/
 ```
