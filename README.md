@@ -27,12 +27,12 @@ cd pva-faster-rcnn/
 
 3.Run the demo.py
 ```Shell 
-python tools.py
+python tools/demo.py
 ```
 
 3.If you want to run the demo.py with the PVANET-lite nework.
 ```Shell
-python tools.py --lite
+python tools/demo.py --lite
 ```
 
 
