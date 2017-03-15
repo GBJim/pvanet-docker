@@ -6,7 +6,7 @@
 1.Clone this repository
 ```Shell
 git clone https://github.com/GBJim/pvanet-docker.git
-```Shell
+```
 
 2.Build the image with nvidia-docker
 ```Shell
