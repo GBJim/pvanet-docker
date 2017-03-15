@@ -22,7 +22,7 @@ nvidia-docker run -ti <IMAGE_NAME_YOU_LIKE>
 
 2.Once you are attached to the image, move to the pvanet directory
 ```Shell 
-cd pva-faster-rcnn/
+cd ~/pva-faster-rcnn/
 ```
 
 3.Run the demo.py
