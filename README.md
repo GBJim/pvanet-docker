@@ -15,17 +15,22 @@ nvidia-docker build -t <IMAGE_NAME_YOU_LIKE> .
 ```
 
 ## Run the demo:
-1.Move to the pvanet directory
+1.Start the image with nvidia-docker
+```Shell 
+nvidia-docker run -ti <IMAGE_NAME_YOU_LIKE>
+```
+
+2.Once you are attach to the image, move to the pvanet directory
 ```Shell 
 cd pva-faster-rcnn/
 ```
 
-2.Run the demo.py
+3.Run the demo.py
 ```Shell 
 python tools.py
 ```
 
-3.Run the demo.py with the PVANET-lite nework.
+3.If you want to run the demo.py with the PVANET-lite nework.
 ```Shell
 python tools.py --lite
 ```
