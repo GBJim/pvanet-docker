@@ -33,6 +33,7 @@ obd start --net lite
 ```Shell 
 obd run pvanet/data/demo
 ```
+An JSON output from STDOUT like the following. The order of result is soted based on <b>score<b>, the confidence of the detection, from highest to lowest.
 ```Json
 {
   "000456.jpg": {
@@ -98,7 +99,7 @@ obd run pvanet/data/demo
         "class": "person", 
         "score": 0.6484137773513794, 
         "xmax": 405.0565185546875, 
-        "xmin": 17.534042358398438, 
+        "xmin": 17.534ng042358398438, 
         "ymax": 346.99365234375, 
         "ymin": 0.1562347412109375
       }
@@ -123,13 +124,12 @@ obd run pvanet/data/demo
         "ymax": 374.0, 
         "ymin": 109.44758605957031
       }
-...
-...
+......
 ```
 
 3.To inspect the status of detection daemon
 ```Shell
-obd status
+obd statusng
 ```
 
 4.Stop the detection daemon and unload the model from GPU
