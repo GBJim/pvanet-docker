@@ -5,7 +5,7 @@
 ## Build the image:
 1.Clone this repository
 ```Shell
-git clone https://github.com/GBJim/pvanet-docker.git
+git clone -b CityEyes --single-branch https://github.com/GBJim/pvanet-docker.git
 ```
 
 2.Build the image with nvidia-docker
@@ -14,25 +14,33 @@ cd pvanet-docker
 nvidia-docker build -t <IMAGE_NAME_YOU_LIKE> .
 ```
 
-## Run the demo:
-1.Start the image with nvidia-docker
+## Run the Object Detection CLI:
+Start the image with nvidia-docker
 ```Shell 
 nvidia-docker run -ti <IMAGE_NAME_YOU_LIKE>
 ```
-
-2.Once you are attach to the image, move to the pvanet directory
+###Once you are in the container, you can do the following operations
+1.Start the detection daemon and load the network on GPU
 ```Shell 
-cd pva-faster-rcnn/
+obd start
 ```
-
-3.Run the demo.py
-```Shell 
-python tools.py
-```
-
-3.If you want to run the demo.py with the PVANET-lite nework.
+You can also specify lite version of PVANET to load on GPU
 ```Shell
-python tools.py --lite
+obd start --net lite
 ```
 
+2.Detect a given image or a directory containing images
+```Shell 
+obd run pvanet/data/demo
+```
+
+3.To inspect the status of detection daemon
+```Shell
+obd status
+```
+
+4.Stop the detection daemon and unload the model from GPU
+```Shell
+obd stop
+```
 
