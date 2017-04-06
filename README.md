@@ -39,7 +39,7 @@ PVANET-full has loaded on GPU
 obd run pvanet/data/demo
 ```
 An JSON output from STDOUT like the following. The order of result is sorted based on <b>score</b>, the confidence of the detection, from highest to lowest.
-```Json
+'''
 {
   "000456.jpg": {
     "result": [
@@ -130,7 +130,7 @@ An JSON output from STDOUT like the following. The order of result is sorted bas
         "ymin": 109.44758605957031
       }
 ......
-```
+'''
 
 3.To inspect the status of detection daemon
 ```Shell
