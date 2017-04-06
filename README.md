@@ -104,7 +104,7 @@ An JSON output from STDOUT like the following. The order of result is sorted bas
         "class": "person", 
         "score": 0.6484137773513794, 
         "xmax": 405.0565185546875, 
-        "xmin": 17.534ng042358398438, 
+        "xmin": 17.534042358398438, 
         "ymax": 346.99365234375, 
         "ymin": 0.1562347412109375
       }
