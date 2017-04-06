@@ -28,12 +28,17 @@ You can also specify lite version of PVANET to load on GPU
 ```Shell
 obd start --net lite
 ```
+The following Messages will prompt
+```
+Loading Network to GPU
+PVANET-full has loaded on GPU
+```
 
 2.Detect a given image or a directory containing images
 ```Shell 
 obd run pvanet/data/demo
 ```
-An JSON output from STDOUT like the following. The order of result is soted based on <b>score<b>, the confidence of the detection, from highest to lowest.
+An JSON output from STDOUT like the following. The order of result is sorted based on <b>score</b>, the confidence of the detection, from highest to lowest.
 ```Json
 {
   "000456.jpg": {
@@ -129,11 +134,26 @@ An JSON output from STDOUT like the following. The order of result is soted base
 
 3.To inspect the status of detection daemon
 ```Shell
-obd statusng
+obd status
+```
+The pid and the information of loaded network will be given
+```Shell
+The server is running with pid: 22
+{
+  "prototxt": "/root/Object-Detection/pvanet/models/pvanet/full/test.pt", 
+  "version": "full", 
+  "weights": "/root/Object-Detection/pvanet/models/pvanet/full/test.model"
+}
 ```
 
 4.Stop the detection daemon and unload the model from GPU
 ```Shell
 obd stop
 ```
+The shutdown message will prompt
+```Shell
+Object Detection server with pid 22 stopped
+Memory released from GPU
+```
+
 
