@@ -20,3 +20,15 @@ RUN cd /home \
  	&& make -j8 && make pycaffe \
 	&& pip install easydict opencv-python \
 	&& yum -y install tkinter
+
+
+	RUN cd /root \
+	        && git clone https://github.com/GBJim/Object-Detection.git \
+	        && cd Object-Detection \
+	        && pip install --editable . \
+	        && ln -s /home/pva-faster-rcnn pvanet \
+	        && ln /dev/null /dev/raw1394 \
+					&& pip install requests\
+	        && yum -y install lsof
+
+	WORKDIR /root
