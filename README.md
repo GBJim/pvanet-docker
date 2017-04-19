@@ -11,6 +11,7 @@ git clone https://github.com/GBJim/pvanet-docker.git
 2.Build the image with nvidia-docker
 ```Shell
 cd pvanet-docker
+git 
 nvidia-docker build -t <IMAGE_NAME_YOU_LIKE> .
 ```
 
