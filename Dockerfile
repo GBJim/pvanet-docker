@@ -2,7 +2,6 @@ FROM tsungjen/centos-caffe
 
 MAINTAINER Tsung Jen, Hsu <max.hsu@ironyun.com>
 
-
 RUN cd /home \
 	&& git clone  --recursive https://github.com/ShuaiW/pva-faster-rcnn.git \
 	&& cd pva-faster-rcnn/ \
