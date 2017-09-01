@@ -7,10 +7,10 @@ RUN cd ~/ \
 	&& git clone  --recursive https://github.com/ShuaiW/pva-faster-rcnn.git \
 	&& cd pva-faster-rcnn/ \
         && git remote add gb https://github.com/GBJim/pvanet.git \
- 	&& git pull gb production \
+ 	&& git fetch gb production \
+        && git checkout production \ 
+	&& sh models/download_production_model.sh \
 	&& cp Makefile.config caffe-fast-rcnn/ \
-	&& sh models/pvanet/download_models.sh \ 
-	&& sh models/pvanet/download_lite_models.sh \
 	&& cd lib/  \
         && make \
 	&& cd ../caffe-fast-rcnn \
@@ -18,7 +18,8 @@ RUN cd ~/ \
 	&& pip install easydict \
 	&& apt-get -y install python-opencv \
 	&& apt-get -y install python-tk 
-	
+
+WORKDIR /root	
 	
 	 
  	
