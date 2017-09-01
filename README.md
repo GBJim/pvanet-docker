@@ -1,6 +1,7 @@
 # This is a Dockerfile that builds a docker image of [PVANET](https://github.com/sanghoon/pva-faster-rcnn)
 
-## 1.This image can only be built inside the IronYun domain, otherwise the caffemodel for PVANET will be missing 2.Currently the subordinate class of detection result are meaningless, it's only output examples
+## 1.This image can only be built inside the IronYun domain, otherwise the caffemodel for PVANET will be missing 
+## 2.Currently the subordinate class of detection result are meaningless, it's only output examples
 
 ## Build the image:
 1.Clone this repository
