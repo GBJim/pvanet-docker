@@ -29,10 +29,14 @@ cd ~/pva-faster-rcnn/
 ```Shell 
 python tools/demo.py
 ```
+The output will be in JSON format. A list containing info of multiple objects, each object also contains the information of subordinate object class
+```JSON 
+[{'ymax': 156.07154846191406, 'score': 0.84535301, 'xmax': 183.18292236328125, 'xmin': 133.978515625, 'ymin': 111.8216781616211, 'class': u'person', 'sub': {'score': 0.84535301, 'class': 'sedan/SUV'}}, {'ymax': 301.84246826171875, 'score': 0.99305266, 'xmax': 426.51141357421875, 'xmin': 89.23002624511719, 'ymin': 44.30303955078125, 'class': u'bus', 'sub': {'score': 0.99305266, 'class': 'van'}}]
+```
 
-3.If you want to run the demo.py with the PVANET-lite nework.
+4.If you want to run the demo.py with a specific GPU.
 ```Shell
-python tools/demo.py --lite
+python tools/demo.py --gpu 1
 ```
 
 
