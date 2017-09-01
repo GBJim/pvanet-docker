@@ -30,7 +30,7 @@ cd ~/pva-faster-rcnn/
 python tools/demo.py
 ```
 The output will be in JSON format. A list containing info of multiple objects, each object also contains the information of subordinate object class
-```json 
+```javascript 
 [
 {'ymax': 156.07154846191406, 'score': 0.84535301, 'xmax': 183.18292236328125, 'xmin': 133.978515625, 'ymin': 111.8216781616211, 'class': u'person', 'sub': {'score': 0.84535301, 'class': 'sedan/SUV'}}, 
 
