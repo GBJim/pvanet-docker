@@ -6,8 +6,8 @@ MAINTAINER Chun-Hao, Chang <ccha97u@gmail.com>
 RUN cd ~/ \
 	&& git clone  --recursive https://github.com/ShuaiW/pva-faster-rcnn.git \
 	&& cd pva-faster-rcnn/ \
-        && git remote add gb https://github.com/GBJim/pvanet.git \
- 	&& git fetch gb production \
+        && git remote add IY http://172.16.15.205/ainvr/pvanet.git \
+ 	&& git fetch IY production \
         && git checkout production \ 
 	&& sh models/download_production_model.sh \
 	&& cp Makefile.config caffe-fast-rcnn/ \
