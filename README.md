@@ -5,7 +5,7 @@
 ## Build the image:
 1.Clone this repository
 ```Shell
-git clone http://172.16.15.205/IY0057/pvanet-docker.git
+git clone http://172.16.15.205/ainvr/pvanet-docker.git
 ```
 
 2.Build the image with nvidia-docker
