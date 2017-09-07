@@ -42,3 +42,5 @@ The output will be in JSON format. A list containing info of multiple objects, e
 ```Shell
 python tools/demo.py --gpu 1
 ```
+## Check the output classes:
+See the [datasets/config.py](http://172.16.15.205/ainvr/pvanet/blob/production/lib/datasets/config.py#L26-#L27) for the specs of main and subordinate classes.
