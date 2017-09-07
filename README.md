@@ -5,7 +5,7 @@
 ## Build the image:
 1.Clone this repository
 ```Shell
-git clone https://github.com/GBJim/pvanet-docker.git
+git clone http://172.16.15.205/IY0057/pvanet-docker.git
 ```
 
 2.Build the image with nvidia-docker
@@ -42,5 +42,3 @@ The output will be in JSON format. A list containing info of multiple objects, e
 ```Shell
 python tools/demo.py --gpu 1
 ```
-
-
