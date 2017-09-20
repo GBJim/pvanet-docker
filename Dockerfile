@@ -13,6 +13,7 @@ RUN cd ~/ \
 	&& cp Makefile.config caffe-fast-rcnn/ \
 	&& cd lib/  \
         && make \
+        && cd ../ainvr && pip install -e . \
 	&& cd ../caffe-fast-rcnn \
  	&& make -j8 && make pycaffe \
 	&& pip install easydict \
