@@ -3,9 +3,10 @@
 ## This image can only be built inside the IronYun domain, otherwise the caffemodel for PVANET will be missing
 
 ## Build the image:
-1.Clone this repository
+1.Clone this repository and switch to production branch
 ```Shell
 git clone http://172.16.15.205/ainvr/pvanet-docker.git
+git checkout production
 ```
 
 2.Build the image with nvidia-docker
