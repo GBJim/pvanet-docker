@@ -4,10 +4,8 @@ MAINTAINER Chun-Hao, Chang <ccha97u@gmail.com>
 
 
 RUN cd ~/ \
-	&& git clone  --recursive https://github.com/GBJim/pvanet.git \
-	&& cd pva-faster-rcnn/ \
- 	&& git fetch gb tracking \
-        && git checkout tracking \ 
+	&& git clone -b tracking  --recursive https://github.com/GBJim/pvanet.git \
+	&& cd pvanet/ \
 	&& sh models/download_production_model.sh \
 	&& cp Makefile.config caffe-fast-rcnn/ \
 	&& cd lib/  \
