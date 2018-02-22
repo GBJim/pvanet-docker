@@ -7,8 +7,7 @@
 ## Build the image:
 1.Clone this repository and switch to production branch
 ```Shell
-git clone http://172.16.15.205/ainvr/pvanet-docker.git
-git checkout production
+git clone -b tracking http://172.16.15.205/ainvr/pvanet-docker.git
 ```
 
 2.Build the image with nvidia-docker
