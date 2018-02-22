@@ -18,30 +18,17 @@ nvidia-docker build -t <IMAGE_NAME_YOU_LIKE> .
 ## Run the demo:
 1.Start the image with nvidia-docker
 ```Shell 
-nvidia-docker run -ti <IMAGE_NAME_YOU_LIKE>
+nvidia-docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw -ti <IMAGE_NAME_YOU_LIKE>
 ```
 
 2.Once you are attached to the image, move to the pvanet directory
 ```Shell 
-cd ~/pva-faster-rcnn/
+cd ~/pvanet/
 ```
 
 3.Run the demo.py
 ```Shell 
 python tools/demo.py
 ```
-The output will be in JSON format. A list containing info of multiple objects, each object also contains the information of subordinate object class
-```javascript 
-[
-{'ymax': 156.07154846191406, 'score': 0.84535301, 'xmax': 183.18292236328125, 'xmin': 133.978515625, 'ymin': 111.8216781616211, 'class': u'person', 'sub': {'score': 0.84535301, 'class': 'sedan/SUV'}}, 
+You should see the visualization of the tracking result
 
-{'ymax': 301.84246826171875, 'score': 0.99305266, 'xmax': 426.51141357421875, 'xmin': 89.23002624511719, 'ymin': 44.30303955078125, 'class': u'bus', 'sub': {'score': 0.99305266, 'class': 'van'}}
-]
-```
-
-4.If you want to run the demo.py with a specific GPU.
-```Shell
-python tools/demo.py --gpu 1
-```
-## Check the output classes:
-See the [datasets/config.py](http://172.16.15.205/ainvr/pvanet/blob/production/lib/datasets/config.py#L26-#L27) for the specs of main and subordinate classes.
