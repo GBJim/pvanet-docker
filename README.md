@@ -19,7 +19,7 @@ nvidia-docker build -t <IMAGE_NAME_YOU_LIKE> .
 ## Run the demo:
 1.Start the image with nvidia-docker
 ```Shell 
-nvidia-docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw -ti <IMAGE_NAME_YOU_LIKE>
+nvidia-docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -ti <IMAGE_NAME_YOU_LIKE>
 ```
 
 2.Once you are attached to the image, move to the pvanet directory
